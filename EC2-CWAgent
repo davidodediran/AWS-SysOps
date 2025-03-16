@@ -1,0 +1,11 @@
+#!/bin/bash
+sudo yum install amazon-cloudwatch-agent
+
+# run the wizard
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+
+# options:
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c ssm:AmazonCloudWatch-linux -s
+
+
+#Create IAM Role for the EC2 and attach it to the EC2
