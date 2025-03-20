@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wave Prediction Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Wave Prediction Platform!</h1>
+    <p>Select a beach to view the latest wave predictions:</p>
+    <select id="beach-select">
+      <option value="">-- Select a Beach --</option>
+      <option value="Bondi Beach">Bondi Beach</option>
+      <option value="Waikiki Beach">Waikiki Beach</option>
+      <option value="Bali Beach">Bali Beach</option>
+      <option value="Miami Beach">Miami Beach</option>
+    </select>
+    <button id="get-prediction">Get Prediction</button>
+
+    <div id="prediction-result" class="hidden">
+      <h2>Wave Prediction</h2>
+      <p><strong>Beach:</strong> <span id="beach-name"></span></p>
+      <p><strong>Wave Height:</strong> <span id="wave-height"></span> meters</p>
+      <p><strong>Condition:</strong> <span id="wave-condition"></span></p>
+      <p><strong>Last Updated:</strong> <span id="timestamp"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
